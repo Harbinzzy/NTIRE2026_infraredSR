@@ -133,3 +133,5 @@ run.sh
 *_old*
 
 model_zoo/team05_hit_IRSRMambaPlus/*.pth
+model_zoo/team05_hit_IRSRMambaPlus/*.pth
+model_zoo/team05_hit_IRSRMambaPlus/*.pth
