@@ -21,6 +21,11 @@ def select_model(args, device):
         name = f"{model_id:02}_DAT_baseline"
         model_path = os.path.join('model_zoo', 'team00_dat.pth')
         model_func = DAT
+    elif model_id == 5:
+        from models.team05_hit_IRSRMambaPlus import main as IRSRMambaPlus
+        name = f"{model_id:02}_hit_IRSRMambaPlus"
+        model_path = os.path.join('model_zoo', 'team05_hit_IRSRMambaPlus', 'net_g_200000.pth')
+        model_func = IRSRMambaPlus
     else:
         raise NotImplementedError(f"Model {model_id} is not implemented.")
 

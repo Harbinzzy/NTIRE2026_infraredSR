@@ -2,175 +2,116 @@
 
 \documentclass[10pt,twocolumn,letterpaper]{article}
 
-%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
-\usepackage{cvpr}              % To produce the CAMERA-READY version
-% \usepackage[review]{cvpr}      % To produce the REVIEW version
-% \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+%%%%%%%%% PAPER TYPE
+\usepackage{cvpr}              % CAMERA-READY
+% \usepackage[review]{cvpr}      % REVIEW
+% \usepackage[pagenumbers]{cvpr} % arXiv version
 
-% Import additional packages in the preamble file, before hyperref
-\input{preamble}
+% -------------------- Basic packages --------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{caption}
 
-% It is strongly recommended to use hyperref, especially for the review version.
-% hyperref with option pagebackref eases the reviewers' job.
-% Please disable hyperref *only* if you encounter grave issues, 
-% e.g. with the file validation for the camera-ready version.
-%
-% If you comment hyperref and then uncomment it, you should delete *.aux before re-running LaTeX.
-% (Or just hit 'q' on the first LaTeX run, let it finish, and you should be clear).
+
+% -------------------- Hyperref --------------------
 \definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
-\usepackage[pagebackref,breaklinks,colorlinks,citecolor=cvprblue]{hyperref}
+\usepackage[pagebackref,breaklinks,colorlinks,citecolor=cvprblue,linkcolor=cvprblue,urlcolor=cvprblue]{hyperref}
 
-%%%%%%%%% PAPER ID  - PLEASE UPDATE
-\def\paperID{*****} % *** Enter the Paper ID here
+%%%%%%%%% PAPER ID
+\def\paperID{hit\_zzy}
 \def\confName{CVPR}
 \def\confYear{2026}
 
-%%%%%%%%% TITLE - PLEASE UPDATE
-\title{NTIRE 2026 Remote Sensing Infrared Image Super-Resolution Challenge Factsheet\\-title of the contribution-}
+%%%%%%%%% TITLE
+\title{NTIRE 2026 Remote Sensing Infrared Image Super-Resolution Challenge Factsheet\\
+Team hit\_zzy}
 
-%%%%%%%%% AUTHORS - PLEASE UPDATE
-\author{First Author\\
-Institution1\\
-Institution1 address\\
-{\tt\small firstauthor@i1.org}
-% For a paper whose authors are all at the same institution,
-% omit the following lines up until the closing ``}''.
-% Additional authors and addresses can be added with ``\and'',
-% just like the second author.
-% To save space, use either the email address or home page, not both
-\and
-Second Author\\
-Institution2\\
-First line of institution2 address\\
-{\tt\small secondauthor@i2.org}
+%%%%%%%%% AUTHORS
+\author{
+Zengyuan Zuo\\
+Harbin Institute of Technology\\
+{\tt\small 3565741165@qq.com} \and Junjun Jiang\\
+Harbin Institute of Technology\\
+{\tt\small jiangjunjun@hit.edu.cn}
 }
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
-
-% 赛事名称与年份全面更新
-This factsheet template is meant to structure the description of the contributions made by each participating team in the NTIRE 2026 challenge on Remote Sensing Infrared Image Super-Resolution. 
-
-Ideally, all the aspects enumerated below should be addressed.
-The provided information, the codes/executables, and the achieved performance on the testing data are used to decide the awardees of the NTIRE 2026 challenge. 
-
-Reproducibility is a must and needs to be checked for the final test results in order to qualify for the NTIRE awards. 
-
-The main winners will be decided based on overall performance and a number of awards will go to novel, interesting solutions and to solutions that stand up as the best in a particular subcategory the judging committee will decide. Please check the competition webpage and forums for more details.
-
-The winners, the awardees and the top-ranking teams will be invited to co-author the NTIRE 2026 challenge report and to submit papers with their solutions to the NTIRE 2026 workshop. Detailed descriptions are appreciated.
-
-The factsheet, \href{https://github.com/zhengchen1999/NTIRE2026_RemoteSensing_Infrared_SR}{source codes/executables}, trained models should be sent to \textbf{all of the NTIRE 2026 challenge organizers (Kai Liu, Haoyang Yue, Zeli Lin, Zheng Chen, Jingkai Wang, Jue Gong, Radu Timofte and Yulun Zhang)} by email.
-
-\section{Email final submission guide}
-
-\noindent To: 
-% 以下邮箱严格按照图片内容排序，已删除旧有无关邮箱
-{normal.kliu@gmail.com}\\ % Kai Liu
-{yuehaoyang@sjtu.edu.cn}\\ % Haoyang Yue
-{tshzary@gmail.com}\\ % Zeli Lin 
-{zhengchen.cse@gmail.com}\\ % Zheng Chen
-{jingkaiwang100@gmail.com}\\ % Jingkai Wang
-{g1017325431@gmail.com}\\ % Jue Gong
-{Radu.Timofte@uni-wuerzburg.de}\\ % Radu Timofte
-{yulun100@gmail.com}\\
-\noindent cc: your\_team\_members\\
-% 邮件标题更新为2026赛事名称
-Title: NTIRE 2026 Remote Sensing Infrared Image Super-Resolution Challenge - TEAM\_NAME - TEAM\_ID\\
-
-To get your TEAM\_ID, please register at \href{https://docs.google.com/spreadsheets/d/1TR5yivh3o2FeALDMKvRtxOQpkDrk61LNNZVlM1vG5u4/edit?usp=sharing}{Google Sheet}. Please fill in your Team Name, Contact Person, and Contact Email in the first empty row from the top of the sheet.
-
-Body contents should include: 
-
-\begin{enumerate}[label=\alph*)]
-\item team name 
-\item team leader's name and email address 
-\item rest of the team members 
-\item user names on NTIRE 2026 CodaLab competitions % 年份更新
-\item Code, pre-trained model, and factsheet download command, e.g. \texttt{git clone ...}, \texttt{wget ...}
-\item Result download command, e.g. \texttt{wget ...}
-\begin{itemize}
-    \item Please provide different URLs in e) and f)
-\end{itemize}
-\end{enumerate}
-
-\noindent Factsheet must be a compiled pdf file together with a zip with .tex factsheet source files. Please provide a detailed explanation.
-
-\section{Code Submission}
-
-% 仓库链接更新为2026遥感红外赛道（请最终确认官方仓库）
-The code and trained models should be organized according to the \href{https://github.com/Kai-Liu001/NTIRE2026_infraredSR}{GitHub repository}. This code repository provides the basis for comparing the various methods in the challenge. \textbf{Code scripts based on other repositories will not be accepted.} Specifically, you should follow the steps below.
-\begin{enumerate}
-    \item Git clone \href{https://github.com/Kai-Liu001/NTIRE2026_infraredSR}{the repository}
-    \item Put your model script under the \texttt{models/[Team\_ID]\_[Model\_Name]} folder
-    \item Put your pretrained model under the \texttt{model\_zoo/[Team\_ID]\_[Model\_Name]} folder
-    \item Modify \texttt{model\_path} in \texttt{test.py}. Modify the imported models
-    \item \texttt{python test.py} (restore images, details in GitHub)
-    \item \texttt{python eval.py} (eval results, details in GitHub)
-\end{enumerate}
-Please send us the command to download your code, e.g. \texttt{git clone [Your repository link]}
-When submitting the code, please remove the input and output images in the (any) \texttt{data} folder to save the bandwidth.
-
 \section{Factsheet Information}
-
-The factsheet should contain the following information. Most importantly, you should describe your method in detail. The training strategy (optimization method, learning rate schedule, and other parameters such as batch size, and patch size) and training data (information about the additional training data) should also be explained in detail.
 
 \subsection{Team details}
 
 \begin{itemize}
-\item Team name                                  
-\item Team leader name                           
-\item Team leader address, phone number, and email 
-\item Rest of the team members        
-\item Team website URL (if any)                   
-\item Affiliation
-\item Affiliation of the team and/or team members with NTIRE 2026 sponsors (check the workshop website) % 年份更新
-\item User names and entries on the NTIRE 2026 Codalab competitions (development/validation and testing phases) % 年份更新
-\item Best scoring entries of the team during the testing phase
-\item Link to the codes/executables of the solution(s)
+    \item \textbf{Team name:} hit\_zzy
+    \item \textbf{Team leader name:} Zengyuan Zuo
+    \item \textbf{Team leader email:} 3565741165@qq.com
+    \item \textbf{Rest of the team members:} Junjun Jiang
+    \item \textbf{Team website URL (if any):} N/A
+    \item \textbf{Affiliation:} Harbin Institute of Technology
+    \item \textbf{Affiliation of the team and/or team members with NTIRE 2026 sponsors:} None
+    \item \textbf{User names and entries on the NTIRE 2026 CodaLab competitions:} hit\_zzy
+    \item \textbf{Best scoring entries of the team during the testing phase:} 54.02
+    \item \textbf{Link to the codes/executables of the solution(s):} \url{https://github.com/Harbinzzy/NTIRE2026_infraredSR}
 \end{itemize}
 
 \subsection{Method details}
 
-You should describe your proposed solution in detail. This part is equivalent to the methodology part of a conference paper submission. The description should cover the following details.
+\subsubsection{General method description}
 
-\begin{itemize}
-\item General method description (How is the network designed to handle remote sensing infrared data.) % 微调以适配红外遥感特性
-\item Representative image/diagram/pipeline of the method(s)  
-\item Training strategy
-\item Experimental results
-\item References                                               
-\end{itemize}
+Our solution IRSRMambaPlus is built upon the IRSRMamba~\cite{huang2025irsrmamba} framework, a Mamba-based infrared image super-resolution architecture that combines long-range dependency modeling and multi-scale feature extraction. Based on this baseline, we adapt the method to the remote sensing infrared super-resolution challenge by introducing two additional guidance priors into the input space and by redesigning the training pipeline.
 
-Additionally, you can refer to the following items to provide a detailed description.
-\begin{itemize}
-\item Total method complexity (number of parameters, FLOPs, runtime)
-\item Which pre-trained or external methods/models have been used (for any stage, if any) 
-\item Which data has been used (at any stage, if any) 
-\item Training description
-\item Testing description
-\item Quantitative and qualitative advantages of the proposed solution for remote sensing infrared scenarios
-\item Results of the comparison to other approaches (if any)
-\item Results on other benchmarks (if any)
-\item Novelty degree of the solution and if it has been previously published
-\item It is OK if the proposed solution is based on other works (papers, reports, Internet sources (links), etc). It is ethically wrong and misconduct if you are not properly giving credit and hiding this information.
-\end{itemize}
+Specifically, instead of only using the original three-channel low-resolution image as input, we concatenate two additional guidance maps~\cite{zou2026toward}, namely an edge map and a heat map, resulting in a five-channel input representation:
+\[
+\mathbf{x}_{in} = [\mathbf{x}_{RGB}, \mathbf{x}_{edge}, \mathbf{x}_{heat}] \in \mathbb{R}^{H \times W \times 5}.
+\]
+The edge map is used to provide explicit structural and boundary information, while the heat map is used to encode smoothed intensity distribution cues. This modification is lightweight, but effective for remote sensing infrared images, which often exhibit weak textures, low contrast, and blurred boundaries.
+
+During inference, we adopt self-ensemble to further improve reconstruction quality. 
+Specifically, eight geometric transformations (four rotations and their corresponding horizontal flips) are applied to the input image. 
+Each transformed input is processed independently by the network, and the inverse transformations are applied to the outputs before averaging them to obtain the final result.
+
+\subsubsection{Training strategy}
+
+In addition to the input redesign, we employ a three-stage curriculum training strategy. 
+In the first stage, the model is trained on the training set with $\times2$ supervision to learn a stable coarse reconstruction mapping. 
+In the second stage, the model is further trained on the training set with $\times4$ supervision to adapt to the target upscaling factor. 
+In the third stage, the model is refined using alternating training between the training set $\times4$ data and the validation set $\times2$ data, where the auxiliary branch is assigned to improve robustness.
+
+The model is optimized using Adam with an initial learning rate of $2\times10^{-4}$ and betas $(0.9, 0.99)$ without weight decay. 
+A MultiStepRestartLR scheduler is used with milestones at 70k, 110k, and 170k iterations and a decay factor of 0.5, together with restart points at 0, 30k, and 140k iterations. 
+The total training length is 200k iterations with a warm-up of 500 iterations. 
+The default batch size is 12 per GPU and is increased to 48 in the second and third stages. 
+Training patches of size $64\times64$ are randomly cropped, and random horizontal flipping and rotation are applied for data augmentation.
+
+\subsubsection{Loss function}
+
+The training objective combines a pixel-domain reconstruction loss with an additional SSM-related loss. 
+The SSM loss weight is set to 1.0 and the pixel loss weight to 0.2. 
+Mean reduction and mean aggregation are used during optimization.
 
 \section{Other details}
+
 \begin{itemize}
-\item Planned submission of a solution(s) description paper at NTIRE 2026 workshop. % 年份更新
-\item General comments and impressions of the NTIRE 2026 challenge. % 年份更新
-\item What do you expect from a new challenge in remote sensing image restoration, enhancement and manipulation? % 适配遥感领域
-\item Other comments: encountered difficulties, fairness of the challenge, proposed subcategories, proposed evaluation method(s), etc.
+    \item \textbf{Planned submission of a solution description paper at the NTIRE 2026 workshop:} No
+    \item \textbf{General comments and impressions of the NTIRE 2026 challenge:} The challenge is well designed and practically meaningful. Remote sensing infrared super-resolution is a difficult but important problem, and the benchmark encourages methods that improve both structural fidelity and restoration quality.
+    \item \textbf{What do you expect from a new challenge in remote sensing image restoration, enhancement and manipulation?} We hope future challenges can include more realistic degradation settings, stronger cross-domain evaluation, and more task-oriented assessment protocols.
+    \item \textbf{Other comments:} No
 \end{itemize}
 
-%%%%%%%%% REFERENCES
-{\small
 \bibliographystyle{ieeenat_fullname}
 \bibliography{main}
-}
 
 \end{document}
