@@ -8,7 +8,7 @@ worksheet/
 # *.jpg
 *.pt
 *.gif
-# *.pth
+*.pth
 *.dat
 *.zip
 
@@ -132,3 +132,4 @@ run.sh
 *debug*
 *_old*
 
+model_zoo/team05_hit_IRSRMambaPlus/*.pth
